@@ -1,0 +1,50 @@
+dim1:
+coordinates = (0,0,0,0)
+level= (1,0)
+
+##Check character position an adjust string acordingly
+
+addition = ""
+printList = []
+while game:
+	
+	##Level Handling
+	
+	##Keyboard Event handling
+	
+	for Y in array[W][Z]:
+		if charW < len(array)-1:
+			addition = " |"
+		else:
+			addition = "  "
+		for X in array[W][Z][Y]:
+			Srting += getattr(col,X[1])(X[0]) + 
+		printList += [String]
+		if charW > 0:
+			String = '| '
+		else:
+			String = "  "
+		
+ 	if charZ < len(array[W]-1):
+		print(col.green('-'* len(array[charW][charZ][charY])))
+		print""
+	
+	if charZ > 0:
+		printList.append("")
+		printList.append(col.green('-'* len(array[charW][charZ][charY])))
+
+	cls()
+
+	for X in printList:
+		print (X)
+
+	
+	if charW == goalW and charZ == goalZ and charY == goalY and charX == goalX:
+		if goalType == "lvl":
+			level[1] += 1
+		if goalType == 'dim':
+			level[0] += 1
+			level[1] = 0
+	
+	clock.tick(30)
+
